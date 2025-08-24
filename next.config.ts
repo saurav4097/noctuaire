@@ -2,9 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   eslint: {
+    // ✅ This skips ESLint completely on Vercel builds
     ignoreDuringBuilds: true,
   },
   typescript: {
+    // ✅ This skips type errors (like `any`) during build
     ignoreBuildErrors: true,
   },
   images: {
